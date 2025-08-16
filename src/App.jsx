@@ -16,7 +16,7 @@ function App() {
   const [customText, setCustomText] = useState('')
   const [messageType, setMessageType] = useState('morning')
   const [textStyle, setTextStyle] = useState({
-    font: 'cursive',
+    font: 'serif',
     color: '#ffffff',
     size: 'text-2xl',
     alignment: 'center'
