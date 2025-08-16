@@ -18,7 +18,7 @@ function App() {
   const [textStyle, setTextStyle] = useState({
     font: 'serif',
     color: '#ffffff',
-    size: 'text-2xl',
+    size: 'text-lg',
     alignment: 'center'
   })
   const [isGenerating, setIsGenerating] = useState(false)
