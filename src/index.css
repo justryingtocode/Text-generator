@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-spiritual-50 to-spiritual-100 min-h-screen;
+    cursor: auto; /* Use default cursor */
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Disable animations on mobile for better performance */
+  @media (max-width: 768px) {
+    body {
+      cursor: auto !important;
+    }
+    
+    /* Disable all animations on mobile */
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* High performance mode - disable all animations */
+  .high-performance * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .high-performance body {
+    cursor: auto !important;
+  }
+
+  /* Removed custom cursor for better performance */
+
+  /* Removed complex cursor effects for better performance */
+
+  /* Standard cursor for interactive elements */
+  button, a, [role="button"], input, textarea, select {
+    cursor: pointer;
+  }
+
+  /* Removed cursor animations for better performance */
+
+  /* Static background for better performance */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(237, 117, 22, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(237, 117, 22, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Removed float animation for better performance */
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/20 backdrop-blur-md border border-white/30;
+    box-shadow: 0 8px 32px rgba(237, 117, 22, 0.1);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  /* Simple glow effect for better performance */
+  .spiritual-glow {
+    box-shadow: 0 0 15px rgba(237, 117, 22, 0.3);
+  }
+
+  /* Removed floating animation for better performance */
+
+  /* Removed pulse animation for better performance */
+
+  /* Removed shimmer effect for better performance */
+
+  /* Removed breathing animation for better performance */
+
+  /* Removed sparkle effect for better performance */
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #ed7516, #f1943d, #f6bb77);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Static gradient background for better performance */
+  .morph-bg {
+    background: linear-gradient(-45deg, #fef7ee, #fdedd6, #fad7ac, #f6bb77);
+  }
+
+  /* Ripple effect */
+  .ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(237, 117, 22, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .ripple:active::before {
+    width: 300px;
+    height: 300px;
+  }
+}

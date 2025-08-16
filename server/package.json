@@ -1,0 +1,22 @@
+{
+  "name": "text-generation-api",
+  "version": "1.0.0",
+  "description": "Server-side API for spiritual text generation",
+  "main": "textGenerationAPI.js",
+  "scripts": {
+    "start": "node textGenerationAPI.js",
+    "dev": "nodemon textGenerationAPI.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["api", "text-generation", "spiritual", "messages"],
+  "author": "Your Name",
+  "license": "MIT"
+}
+
